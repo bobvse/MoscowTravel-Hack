@@ -33,6 +33,7 @@
     <color name="disabled_pink">#77324b</color>
     <color name="grey">#818a97</color>
     <color name="dark">#1f242e</color>
+    <color name="balck">#000000</color>
     <color name="placeholder">#cdd5df</color>
     <color name="devider">#40818998</color>
     <color name="avia_params_buttons_blue">#069DF9</color>

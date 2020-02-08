@@ -11,12 +11,12 @@
         android:id="@+id/action_tours"
         android:enabled="true"
         android:icon="@drawable/ic_middle_icon"
-        android:title="Что то"
+        android:title="Туры"
         app:showAsAction="ifRoom" />
     <item
         android:id="@+id/action_profile"
         android:enabled="true"
         android:icon="@drawable/ic_points"
-        android:title="Остальное"
+        android:title="Профиль"
         app:showAsAction="ifRoom" />
 </menu>
