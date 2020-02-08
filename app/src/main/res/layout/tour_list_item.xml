@@ -16,7 +16,8 @@
         android:layout_height="337dp"
         android:src="@drawable/palacefull"
         app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="0dp" />
+        tools:layout_editor_absoluteX="0dp"
+        android:contentDescription="TODO" />
 
     <TextView
         android:id="@+id/textView"

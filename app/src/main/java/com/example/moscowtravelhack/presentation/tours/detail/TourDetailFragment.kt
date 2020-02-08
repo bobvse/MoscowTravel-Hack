@@ -9,6 +9,7 @@ import com.example.moscowtravelhack.core.screen.BaseDIMoxyFragment
 import com.example.moscowtravelhack.presentation.tours.detail.di.TourDetailGraph
 import com.google.android.material.appbar.AppBarLayout
 import com.google.android.material.appbar.AppBarLayout.OnOffsetChangedListener
+import kotlinx.android.synthetic.main.button_buy.*
 import kotlinx.android.synthetic.main.detail_tour_fragment.*
 
 
@@ -30,13 +31,14 @@ class TourDetailFragment : BaseDIMoxyFragment<TourDetailGraph>(), TourDetailView
             override fun onOffsetChanged(appBarLayout: AppBarLayout, verticalOffset: Int) {
                 if (scrollRange == -1) {
                     scrollRange = appBarLayout.totalScrollRange
+
                 }
                 if (scrollRange + verticalOffset == 0) {
+                    btnBuy.visibility = View.GONE
                     isShow = true
-                   // showOption(R.id.action_info)
                 } else if (isShow) {
                     isShow = false
-                   // hideOption(R.id.action_info)
+                    btnBuy.visibility = View.VISIBLE
                 }
             }
         })
