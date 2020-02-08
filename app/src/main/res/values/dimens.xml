@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="indent_1dp">1dp</dimen>
+    <dimen name="indent_x1">8dp</dimen>
+    <dimen name="indent_x2">16dp</dimen>
+    <dimen name="indent_x3">24dp</dimen>
+
+    <dimen name="indent_x4">32dp</dimen>
+    <!--<dimen name="indent_x4.25">34dp</dimen>-->
+
+    <dimen name="indent_x5">40dp</dimen>
+    <!--<dimen name="indent_x5.25">42dp</dimen>-->
+
+    <dimen name="indent_x6">48dp</dimen>
+
+    <dimen name="indent_x7">56dp</dimen>
+    <dimen name="indent_x8">64dp</dimen>
+    <dimen name="indent_x9">72dp</dimen>
+    <dimen name="indent_x10">80dp</dimen>
+    <dimen name="indent_x11">88dp</dimen>
+
+    <dimen name="indent_x12">96dp</dimen>
+    <!--<dimen name="indent_x13">104dp</dimen>-->
+    <dimen name="indent_x14">112dp</dimen>
+    <!--<dimen name="indent_x15">120dp</dimen>-->
+    <dimen name="indent_x16">128dp</dimen>
+    <!--<dimen name="indent_x21">168dp</dimen>-->
+    <!--<dimen name="indent_x32">256dp</dimen>-->
+    <!--<dimen name="indent_x33">264dp</dimen>-->
+    <!--Отступы у материаловской кнопки с её супер тенями-->
+    <dimen name="btn_indent_x2_height">10dp</dimen>
+    <dimen name="btn_indent_x2_width">12dp</dimen>
+
+    <dimen name="margin_right_x2_from_spinner">16dp</dimen>
+
+    <dimen name="btn_small_in_group_indent_height">4dp</dimen>
+    <dimen name="margin_recycler_fare_family">16dp</dimen>
+
+    <dimen name="buy_button_width">300dp</dimen>
+    <dimen name="buy_button_height">48dp</dimen>
+    <dimen name="buy_button_min_width">200dp</dimen>
+
+    <dimen name="text_size_medium">16sp</dimen>
+
+    <dimen name="text_size_filter_transfer">10sp</dimen>
+
+</resources>
