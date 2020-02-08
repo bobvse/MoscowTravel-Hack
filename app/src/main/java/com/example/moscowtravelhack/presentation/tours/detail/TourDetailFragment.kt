@@ -64,7 +64,7 @@ class TourDetailFragment : BaseDIMoxyFragment<TourDetailGraph>(), TourDetailView
         )
     }
 
-    fun initRecyclerView() {
+    private fun initRecyclerView() {
         rvPictureSee.adapter = seeAdapeter
         rvPictureSee.layoutManager = LinearLayoutManager(context, RecyclerView.HORIZONTAL, false)
         rvPictureSee.addItemDecoration(SpaceHorizontalItemDecoration(resources.getDimension(R.dimen.indent_x2).toInt()))

@@ -21,7 +21,7 @@ import java.lang.reflect.Modifier
 class RetrofitModule {
 
     companion object {
-        private const val BASE_URL = "http://hakaton-nirvana.eastus.cloudapp.azure.com:8080"
+        private const val BASE_URL = "https://moscowtravelhackapi20200209010558.azurewebsites.net/api/v1/"
         private const val DATE_FORMAT = "yyyy-MM-dd HH:mm:ss"
     }
 
