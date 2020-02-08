@@ -5,5 +5,6 @@ interface MainRouter {
     fun openMapScreen()
     fun openProfileScreen()
     fun openToursScreen()
+    fun openDetailTourScreen()
     fun goBack()
 }

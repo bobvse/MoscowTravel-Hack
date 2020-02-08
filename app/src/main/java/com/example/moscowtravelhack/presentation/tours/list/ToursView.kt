@@ -1,4 +1,4 @@
-package com.example.moscowtravelhack.presentation.tours
+package com.example.moscowtravelhack.presentation.tours.list
 
 import com.arellomobile.mvp.MvpView
 import com.arellomobile.mvp.viewstate.strategy.OneExecutionStateStrategy

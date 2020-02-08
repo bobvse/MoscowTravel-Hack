@@ -1,7 +1,8 @@
-package com.example.moscowtravelhack.presentation.tours.di
+package com.example.moscowtravelhack.presentation.tours.detail.di
 
 import com.example.moscowtravelhack.core.screen.ComponentCompanion
 import com.example.moscowtravelhack.di.deps.global.GlobalDependencies
+import com.example.moscowtravelhack.di.deps.navigation.RouterDependencies
 import com.example.moscowtravelhack.di.deps.network.NetworkDependencies
 import com.example.moscowtravelhack.di.scope.PerPresentationScope
 import dagger.Component
@@ -10,17 +11,19 @@ import dagger.Component
 @Component(
     dependencies = [
         NetworkDependencies::class,
-        GlobalDependencies::class
+        GlobalDependencies::class,
+        RouterDependencies::class
     ]
 )
-interface ToursComponent {
-    fun inject(graph: ToursGraph)
+interface TourDetailComponent {
+    fun inject(graph: TourDetailGraph)
 
-    companion object : ComponentCompanion<ToursComponent>() {
-        override fun createComponent(): ToursComponent {
-            return DaggerToursComponent.builder()
+    companion object : ComponentCompanion<TourDetailComponent>() {
+        override fun createComponent(): TourDetailComponent {
+            return DaggerTourDetailComponent.builder()
                 .networkDependencies(NetworkDependencies.get())
                 .globalDependencies(GlobalDependencies.get())
+                .routerDependencies(RouterDependencies.get())
                 .build()
         }
     }

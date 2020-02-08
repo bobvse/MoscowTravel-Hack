@@ -16,5 +16,9 @@ class RouterImpl : Router(), MainRouter {
         navigateTo(Screens.ToursScreen)
     }
 
+    override fun openDetailTourScreen(){
+        navigateTo(Screens.DetailTourScreen)
+    }
+
     override fun goBack() = exit()
 }
