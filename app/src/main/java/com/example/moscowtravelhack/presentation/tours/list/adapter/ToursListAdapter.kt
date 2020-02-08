@@ -11,9 +11,9 @@ import com.example.moscowtravelhack.core.BaseItemsAdapter
 import kotlinx.android.synthetic.main.tour_list_item.view.*
 
 class ToursListAdapter(
-    cities: MutableList<TourModel> = mutableListOf(),
+    tours: MutableList<TourModel> = mutableListOf(),
     private val onItemClicked: (item: TourModel) -> Unit
-) : BaseItemsAdapter<TourModel, ToursListAdapter.CityViewHolder>(cities) {
+) : BaseItemsAdapter<TourModel, ToursListAdapter.CityViewHolder>(tours) {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CityViewHolder {
         return CityViewHolder(
@@ -31,15 +31,14 @@ class ToursListAdapter(
     }
 
     class CityViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        fun bind(city: TourModel, onCityClicked: (item: TourModel) -> Unit) {
-//            itemView.tvSearchCityListItemName.text = city.cityName
-//            itemView.tvSearchCountryListItemName.text = city.countryName
+        fun bind(tour: TourModel, onItemClicked: (item: TourModel) -> Unit) {
+
             Glide.with(itemView.context)
                 .load(R.drawable.palacefull)
                 .centerCrop()
-                // .placeholder(R.drawable.ic_air_company_placeholder)
                 .into(itemView.imageView)
-//            itemView.mainCityContainer.setOnClickListener { onCityClicked(city) }
+
+            itemView.itemContainer.setOnClickListener { onItemClicked(tour) }
         }
     }
 
