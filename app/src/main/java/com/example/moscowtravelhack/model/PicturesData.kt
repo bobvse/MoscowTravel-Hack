@@ -1,3 +1,5 @@
 package com.example.moscowtravelhack.model
 
-class Testresponse
+data class PicturesData(var url: String){
+
+}
