@@ -10,7 +10,7 @@ class GlobalInteractor
     private val globalRepo: GlobalRepo
 ) : GlobalUseCase {
 
-    fun getToursList(): Single<ToursListResponse> {
+    fun getToursList(): Single<List<ToursListResponse>> {
         return globalRepo.getTours()
     }
 }

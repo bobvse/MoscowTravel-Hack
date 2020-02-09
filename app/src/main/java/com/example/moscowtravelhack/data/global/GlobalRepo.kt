@@ -4,5 +4,5 @@ import com.example.moscowtravelhack.model.ToursListResponse
 import io.reactivex.Single
 
 interface GlobalRepo {
-    fun getTours(): Single<ToursListResponse>
+    fun getTours(): Single<List<ToursListResponse>>
 }

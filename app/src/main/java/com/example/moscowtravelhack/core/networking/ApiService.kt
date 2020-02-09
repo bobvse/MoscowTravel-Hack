@@ -6,8 +6,8 @@ import retrofit2.http.GET
 
 interface ApiService {
 
-    @GET("/tours")
-    fun getTours(): Single<ToursListResponse>
+    @GET("/api/v1/tours")
+    fun getTours(): Single<List<ToursListResponse>>
 
 //    @GET("Company/{id}")
 //    fun getCompany(@Path("id") id: String): Single<CompanyResponse>

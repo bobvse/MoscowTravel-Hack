@@ -10,7 +10,7 @@ class GlobalRepoImpl
     val api: ApiService
 ) : GlobalRepo {
 
-    override fun getTours(): Single<ToursListResponse> {
+    override fun getTours(): Single<List<ToursListResponse>> {
         return api.getTours()
     }
 }

@@ -5,9 +5,30 @@ import com.google.gson.annotations.Expose
 import com.google.gson.annotations.SerializedName
 
 
-
-
 class ToursListResponse {
+
+    @SerializedName("id")
+    @Expose
+    var id: Int? = null
+    @SerializedName("name")
+    @Expose
+    var name: String? = null
+    @SerializedName("description")
+    @Expose
+    var description: String? = null
+    @SerializedName("duration")
+    @Expose
+    var duration: Duration? = null
+    @SerializedName("price")
+    @Expose
+    var price: Int? = null
+    @SerializedName("isPurchased")
+    @Expose
+    var isPurchased: Boolean? = null
+    @SerializedName("images")
+    @Expose
+    var images: List<Image>? = null
+
     class Duration {
         @SerializedName("ticks")
         @Expose
@@ -42,30 +63,6 @@ class ToursListResponse {
         @SerializedName("totalSeconds")
         @Expose
         var totalSeconds: Int? = null
-    }
-
-    class Example {
-        @SerializedName("id")
-        @Expose
-        var id: Int? = null
-        @SerializedName("name")
-        @Expose
-        var name: String? = null
-        @SerializedName("description")
-        @Expose
-        var description: String? = null
-        @SerializedName("duration")
-        @Expose
-        var duration: Duration? = null
-        @SerializedName("price")
-        @Expose
-        var price: Int? = null
-        @SerializedName("isPurchased")
-        @Expose
-        var isPurchased: Boolean? = null
-        @SerializedName("images")
-        @Expose
-        var images: List<Image>? = null
     }
 
     class Image {

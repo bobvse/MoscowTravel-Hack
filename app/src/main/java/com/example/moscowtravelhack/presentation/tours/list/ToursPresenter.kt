@@ -26,12 +26,12 @@ class ToursPresenter
         mainRouter.openDetailTourScreen()
     }
 
-    fun getToursList() {
+    private fun getToursList() {
         unsubscribeOnDestroy(globalInteractor.
             getToursList()
             .async()
             .subscribe({
-          //  viewState.updateList(it)
+            viewState.updateList(it)
         }, {
 
         }))
