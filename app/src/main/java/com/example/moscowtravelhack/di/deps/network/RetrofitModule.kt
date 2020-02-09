@@ -1,7 +1,6 @@
 package com.example.moscowtravelhack.di.deps.network
 
 
-import com.example.moscowtravelhack.core.networking.JsonAndXmlConverters
 import com.example.moscowtravelhack.core.networking.ApiService
 import com.example.moscowtravelhack.di.scope.ApplicationScope
 import com.google.gson.FieldNamingPolicy
@@ -14,14 +13,14 @@ import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory
 import retrofit2.converter.gson.GsonConverterFactory
-import retrofit2.converter.simplexml.SimpleXmlConverterFactory
 import java.lang.reflect.Modifier
 
 @Module
 class RetrofitModule {
 
     companion object {
-        private const val BASE_URL = "https://moscowtravelhackapi20200209010558.azurewebsites.net/api/v1/"
+        private const val BASE_URL =
+            "https://moscowtravelhackapi20200209010558.azurewebsites.net/api/v1/"
         private const val DATE_FORMAT = "yyyy-MM-dd HH:mm:ss"
     }
 

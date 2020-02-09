@@ -8,15 +8,16 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.moscowtravelhack.R
 import com.example.moscowtravelhack.core.BaseItemsAdapter
+import com.example.moscowtravelhack.model.ToursListResponse
 import kotlinx.android.synthetic.main.tour_list_item.view.*
 
 class ToursListAdapter(
-    tours: MutableList<TourModel> = mutableListOf(),
-    private val onItemClicked: (item: TourModel) -> Unit
-) : BaseItemsAdapter<TourModel, ToursListAdapter.CityViewHolder>(tours) {
+    tours: MutableList<ToursListResponse> = mutableListOf(),
+    private val onItemClicked: (item: ToursListResponse) -> Unit
+) : BaseItemsAdapter<ToursListResponse, ToursListAdapter.ToursViewHolder>(tours) {
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CityViewHolder {
-        return CityViewHolder(
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ToursViewHolder {
+        return ToursViewHolder(
             LayoutInflater.from(parent.context).inflate(
                 R.layout.tour_list_item, parent, false
             )
@@ -25,13 +26,13 @@ class ToursListAdapter(
 
     override fun getItemCount(): Int = items.size
 
-    override fun onBindViewHolder(holder: CityViewHolder, position: Int) {
-        val city = items[position]
-        holder.bind(city, onItemClicked)
+    override fun onBindViewHolder(holder: ToursViewHolder, position: Int) {
+        val tour = items[position]
+        holder.bind(tour, onItemClicked)
     }
 
-    class CityViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        fun bind(tour: TourModel, onItemClicked: (item: TourModel) -> Unit) {
+    class ToursViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+        fun bind(tour: ToursListResponse, onItemClicked: (item: ToursListResponse) -> Unit) {
 
             Glide.with(itemView.context)
                 .load(R.drawable.palacefull)
@@ -43,7 +44,7 @@ class ToursListAdapter(
     }
 
     override fun getDiffCallback(
-        oldItems: List<TourModel>, newItems: List<TourModel>
+        oldItems: List<ToursListResponse>, newItems: List<ToursListResponse>
     ): DiffUtil.Callback {
         return object : DiffUtil.Callback() {
             override fun getOldListSize() = oldItems.size

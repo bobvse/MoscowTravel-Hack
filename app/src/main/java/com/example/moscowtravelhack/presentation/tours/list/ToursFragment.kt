@@ -10,6 +10,7 @@ import com.arellomobile.mvp.presenter.InjectPresenter
 import com.arellomobile.mvp.presenter.ProvidePresenter
 import com.example.moscowtravelhack.R
 import com.example.moscowtravelhack.core.screen.BaseDIMoxyFragment
+import com.example.moscowtravelhack.model.ToursListResponse
 import com.example.moscowtravelhack.presentation.tours.list.adapter.TourModel
 import com.example.moscowtravelhack.presentation.tours.list.adapter.ToursListAdapter
 import com.example.moscowtravelhack.presentation.tours.list.di.ToursGraph
@@ -50,12 +51,16 @@ class ToursFragment : BaseDIMoxyFragment<ToursGraph>(),
 
     private fun addTestData(){
 
-        val testData = mutableListOf<TourModel>()
-        testData.add(TourModel())
-        testData.add(TourModel())
-        testData.add(TourModel())
-        testData.add(TourModel())
-        testData.add(TourModel())
-        adapter.updateItems(testData)
+//        val testData = mutableListOf<TourModel>()
+//        testData.add(TourModel())
+//        testData.add(TourModel())
+//        testData.add(TourModel())
+//        testData.add(TourModel())
+//        testData.add(TourModel())
+       // adapter.updateItems(testData)
+    }
+
+    override fun updateList(items: List<ToursListResponse>) {
+        adapter.updateItems(items)
     }
 }
